@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercicio01 - pop up</title>
+        <meta charset="utf-8">
+        <meta name="author" content="wilian goncalves">
+        <meta name="description" content="Exercicio de pop up">
+        <meta name="keywords" content="html5, css3, javascript, front-end, web, design">
+
+        <style>
+            .banner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 0 1000px rgba(0,0,0, .8);
+                display: none;
+            }
+
+            .banner-close{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Exercicio01 - Pop up</h1>
+
+        <div  class="banner">
+            <button class="banner-close">X</button>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci cum incidunt veniam rem laboriosam magni vitae neque architecto. Velit dolores reprehenderit accusamus molestiae eveniet ipsam voluptates sit neque libero.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore expedita ad eveniet tempore nostrum itaque et deleniti voluptates, praesentium nisi rerum distinctio velit laboriosam porro! Eveniet corrupti libero nihil ab.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, inventore nisi modi qui voluptatum, et repellendus excepturi pariatur dolores maxime soluta quis corrupti corporis! Suscipit odit est laboriosam esse enim.</p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
