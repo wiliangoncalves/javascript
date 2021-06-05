@@ -1,0 +1,48 @@
+<style>
+    .progresso{
+        height: 20px;
+        width: 400px;
+        margin: 20px 0 20px 0;
+        border: 1px solid #444;
+    }
+
+    .progresso > div{
+        background-color: red;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
+
+<video id="meuVideo" width="400px" height="400px" controls controlsList="nodownload">
+    <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"></source>
+    Seu browser não suporta a tag video.
+</video>
+
+<div wm-progress="meuVideo" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button wm-play="meuVideo">Play</button>
+    <button wm-pause="meuVideo">Pause</button>
+</div>
+
+<script>
+    (function(){
+        const video = document.querySelector('#meuVideo');
+        const progressBar = document.querySelector('[wm-progress] > div');
+
+        document.querySelector('[wm-play]').onclick = () => {video.play();}
+        document.querySelector('[wm-pause]').onclick = () => {video.pause();}
+
+        setInterval( () => {
+            const percents = (video.currentTime / video.duration) * 100;
+
+            progressBar.style.width = `${percents}%`;
+            progressBar.innerHTML = percents.toFixed(0) + '%';
+        }, 500)
+    })();
+</script>
