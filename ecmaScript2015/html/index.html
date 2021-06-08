@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desenvolvimento Web</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <style>
+            #conteudo{
+                padding: 30px 0px 30px 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Exercicio html teste</h1>
+        </header>
+
+        <nav>
+            <a href wb-nav="exercicios/teste.html">00 - Teste</a> |
+            <a href wb-nav="exercicios/texto1.html">01 - Texto</a> |
+            <a href wb-nav="exercicios/texto2.html">02 - Texto2</a> |
+            <a href wb-nav="exercicios/listas.html">03 - Listas</a> |
+            <a href wb-nav="exercicios/listaAninhada.html">04 - Lista aninhada</a> |
+            <a href wb-nav="exercicios/links.html">05 - links</a> |
+            <a href wb-nav="exercicios/tabela.html">06 - tabela</a> |
+            <a href wb-nav="exercicios/form/form.html">07 - form</a> |
+            <a href wb-nav="exercicios/imagens.html">08 - imagens</a> |
+            <!-- <a href wb-nav="exercicios/sliderDesafio/slider.html">09 - slider</a> -->
+            <a href wb-nav="exercicios/video.html">09 - video</a> |
+            <a href wb-nav="exercicios/tagsNaoVisuais.html">10 - tags nao visuais</a>
+        </nav>
+
+        <main>
+            <section id="conteudo">
+
+            </section>
+        </main>
+
+        <footer>
+            <p>Desenvolvimento Web</p>
+        </footer>
+    </body>
+
+    <script>
+        let conteudo = document.getElementById('conteudo');
+        
+        document.querySelectorAll('[wb-nav]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                fetch(link.getAttribute('wb-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            });
+        });
+    </script>
+</html>
