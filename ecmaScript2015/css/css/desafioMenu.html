@@ -7,7 +7,147 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        body{
+            margin: 0;
+            background-color: #ddd;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .cabecalho{
+            background-color: #222;
+            border-bottom: 5px solid rgb(72, 103, 241);
+            float: left;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .logo{
+            width: 60%;
+            display: inline-block;
+            
+        }
+        .logo a img{
+            width: 100%;
+        }
+
+        .menu-toggle{
+            float: right;
+            margin-top: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid rgb(119, 110, 110);
+            background-color: rgb(70, 64, 64);
+            color: white;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        .autenticacao{
+            display: none;
+        }
+
+        @media screen and (min-width: 700px){
+            .logo{
+                width: 40%;
+                float: left;
+            }
+
+            .menu-toggle{
+                display: none;
+            }
+
+            .menu{
+                display: block;
+                float: left;
+            }
+            .menu ul li{
+                list-style: none;
+                display: inline-block;
+            }
+            .menu ul li a{
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: 15px;
+                font-size: 22px;
+                color: white;
+            }
+            .menu ul li a:hover{
+                background-color: rgb(135, 150, 235);
+                color: black;
+            }
+        }
+
+        @media screen and (min-width: 900px){
+            .logo{
+                float: left;
+            }
+
+            .menu{
+                float: left;
+            }
+            .menu ul li{
+                margin-top: 15px;
+            }
+            .menu ul li a{
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (min-width: 1000px){
+            .autenticacao{
+                display: block;
+                margin-top: 35px;
+                float: right;
+            }
+
+            .menu ul li{
+                margin-left: -15px;
+            }
+
+            .autenticacao a{
+                text-decoration: none;
+                color: white;
+                text-transform: capitalize;
+                font-size: 20px;
+            }
+
+            .botao{
+                padding: 15px;
+                background-color: rgb(236, 32, 32);
+                border-radius: 20px;
+                margin-left: 15px;
+            }
+        }
+
+        @media screen and (min-width: 1126px){
+            .menu ul li {
+                margin-top: 30px;
+                margin-left: 0;
+            }
+
+            .autenticacao{
+                display: inline-block;
+                margin-top: 50px;
+                margin-left: 230px;
+            }
+
+            .autenticacao a{
+                text-decoration: none;
+                color: white;
+                text-transform: capitalize;
+                font-size: 20px;
+            }
+
+            .botao{
+                padding: 15px;
+                background-color: rgb(236, 32, 32);
+                border-radius: 20px;
+                margin-left: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -42,10 +182,6 @@
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>
-
-    <script>
-        // ...
-    </script>
 </body>
 
 </html>
